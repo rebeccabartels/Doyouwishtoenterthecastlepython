@@ -1,0 +1,17 @@
+stage.set_background("drawbridge")
+
+sprite = codesters.Sprite("dragon")
+
+sprite.go_to(0, -50)
+
+answer = sprite.ask("Do you wish to enter?")
+
+answer = answer.lower()
+
+if answer == "yes":
+    sprite.move_right(175)
+    sprite.say("Please go ahead!")
+
+else:
+    sprite.turn_left(360)
+    sprite.say("You shall not pass!")
